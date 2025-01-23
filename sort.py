@@ -1,14 +1,14 @@
 unsorted_list = [1, 4, 2, 5, 9, 6, 3, 8, 7]
 
 def bubble_sort(unsorted):
-    for i in range(len(unsorted)):  # Outer loop to ensure all passes
+    for i in range(len(unsorted)):  
         swaps = 0
-        for j in range(len(unsorted) - 1 - i):  # Reduce comparisons with each pass
+        for j in range(len(unsorted) - 1 - i):  
             if unsorted[j] > unsorted[j + 1]:
-                # Swap elements
+               
                 unsorted[j], unsorted[j + 1] = unsorted[j + 1], unsorted[j]
                 swaps += 1
-        if swaps == 0:  # If no swaps, the list is sorted
+        if swaps == 0:  
             break
     return unsorted
 
@@ -34,18 +34,15 @@ print(result)
 
 arr=[23,1,56,8]
 def insertion_sort(unsorted):
-    # Traverse through 1 to len(arr)
+    
     for i in range(1, len(arr)):
-        key = arr[i]  # Current element to be compared
+        key = arr[i]  
         j = i - 1
 
-        # Move elements of arr[0..i-1], that are greater than key,
-        # to one position ahead of their current position
         while j >= 0 and arr[j] > key:
             arr[j + 1] = arr[j]
             j -= 1
 
-        # Place the key at the correct position
         arr[j + 1] = key
 
 (insertion_sort(arr))
